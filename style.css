@@ -4,6 +4,7 @@ Colors:
 - Yellow #F7D428
 - Blue #5E97DB;
 - Black #292B2D;
+- Dark gray: #7b848e;
 ;
 */
 
@@ -33,6 +34,11 @@ body {
 	width: 1020px;
 	padding: 0 20px;
 	margin: 0 auto;
+	overflow: hidden;
+}
+
+.row-full {
+	position: relative;
 	overflow: hidden;
 }
 
@@ -79,15 +85,21 @@ header ul li a {
 	text-decoration: none;
 	padding-top: 10px;
 	margin-left: 30px;
+	opacity: 0;
+	transition: opacity 0.2s;
 }
 
 header ul li a:hover{
 	color: #F7D428;
 }
 
+html.menu-top-header header ul li a  {
+	opacity: 1;
+}
+
 .teaser {
 	padding-top: 40px;
-	height: 460px;
+	height: 740px;
 	width: 100%;
 	background-size: cover;
 	background-color: #18dea8;
@@ -96,7 +108,7 @@ header ul li a:hover{
 
 .teaser h1 {
 	padding-top: 100px;
-	font-size: 42px;
+	font-size: 36px;
 	color: white;
 	font-weight: 600;
 }
@@ -104,49 +116,66 @@ header ul li a:hover{
 	margin-top: 10px;
 	border:0;
 	background-color: white;
-	width: 120px;
+	width: 495px;
 	height: 8px
 }
 
+.teaser div .circle {
+	border-radius: 400px;
+	margin: -8px auto 0;
+	width: 400px;
+	height: 400px;
+	border:8px solid white;
+	padding-top: 145px;
+
+}
+
+
+
+
 .features{
 	background-color: #f6f6f6;
-	padding: 60px 0 90px 0;
+	padding: 60px 0 0 0;
 	
 
 }
 
 
 .features h2 {
-	padding-bottom: 20px;
+	padding-bottom: 10px;
+	text-align: center;
 	font-size: 40px;
-	font-weight: 600;
+	font-weight:600;
 	color: #5E97DB;
+}
+
+.features h3 {
+	padding-bottom: 40px;
+	font-size: 18px;
+	color: #7b848e;
+	text-align: center;
+	font-weight: 500;
 }
 
 .features article { 
 	width: 33.33%;
-	height: 300px;
+	height: 600px;
 	float: left;
-	padding: 40px 20px 20px 20px;
-	border-right: 10px solid #f6f6f6;
-	border-left: 10px solid #f6f6f6;
 
 }
 
 
 .features article.projects {
 	background-color: #F7D428;
-	margin-left: -10px;
 
 } 
 
 .features article.icons {
-	background-color: #F7D428;
+	background-color: #f5cd07;
 }
 
 .features article.artworks {
 	background-color: #F7D428;
-	margin-right: -10px;
 }
 
 .about {
